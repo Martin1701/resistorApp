@@ -1,0 +1,88 @@
+.colorTile {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+}
+/* .colorTile:active {
+  height: 90%;
+  width: 90%;
+} */
+#black0,
+#black1,
+#black2,
+#black3,
+#black4 {
+  background-color: black;
+}
+#brown0,
+#brown1,
+#brown2,
+#brown3,
+#brown4 {
+  background-color: brown;
+}
+#red0,
+#red1,
+#red2,
+#red3,
+#red4 {
+  background-color: red;
+}
+#orange0,
+#orange1,
+#orange2,
+#orange3,
+#orange4 {
+  background-color: orange;
+}
+#yellow0,
+#yellow1,
+#yellow2,
+#yellow3,
+#yellow4 {
+  background-color: yellow;
+}
+#green0,
+#green1,
+#green2,
+#green3,
+#green4 {
+  background-color: green;
+}
+#blue0,
+#blue1,
+#blue2,
+#blue3,
+#blue4 {
+  background-color: blue;
+}
+#violet0,
+#violet1,
+#violet2,
+#violet3,
+#violet4 {
+  background-color: violet;
+}
+#gray0,
+#gray1,
+#gray2,
+#gray3,
+#gray4 {
+  background-color: gray;
+}
+#white0,
+#white1,
+#white2,
+#white3,
+#white4 {
+  background-color: white;
+}
+#gold3,
+#gold4 {
+  background-color: gold;
+}
+#silver3,
+#silver4 {
+  background-color: silver;
+}

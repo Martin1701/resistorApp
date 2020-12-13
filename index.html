@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="./script.js"></script>
+    <script type="text/javascript" src="./colorBands.js"></script>
+    <script type="text/javascript" src="./resistanceInput.js"></script>
+    <script type="text/javascript" src="./EIA_Values.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link rel="stylesheet" type="text/css" href="./colorTiles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <input type="text" id="inputField" />
+    <button onclick="calculate()">calculate</button>
+    <div id="tolerances">
+      <div class="toleranceTile" id="20%"></div>
+      <div class="toleranceTile" id="10%"></div>
+      <div class="toleranceTile" id="5%"></div>
+      <div class="toleranceTile" id="2%"></div>
+      <div class="toleranceTile" id="1%"></div>
+      <div class="toleranceTile" id="0.5%"></div>
+    </div>
+    <div id="container">
+      <div id="band0">
+        <div id="dummy"></div>
+        <div id="dummy"></div>
+        <div onclick="band0('black')" class="black colorTile" id="black0"></div>
+        <div onclick="band0('brown')" class="brown colorTile" id="brown0"></div>
+        <div onclick="band0('red')" class="red colorTile" id="red0"></div>
+        <div
+          onclick="band0('orange')"
+          class="orange colorTile"
+          id="orange0"
+        ></div>
+        <div
+          onclick="band0('yellow')"
+          class="yellow colorTile"
+          id="yellow0"
+        ></div>
+        <div
+          onclick="band0('green')"
+          mnnl
+          class="green colorTile"
+          id="green0"
+        ></div>
+        <div onclick="band0('blue')" class="blue colorTile" id="blue0"></div>
+        <div
+          onclick="band0('violet')"
+          class="violet colorTile"
+          id="violet0"
+        ></div>
+        <div onclick="band0('gray')" class="gray colorTile" id="gray0"></div>
+        <div onclick="band0('white')" class="white colorTile" id="white0"></div>
+      </div>
+      <div id="band1">
+        <div id="dummy"></div>
+        <div id="dummy"></div>
+        <div onclick="band1('black')" class="black colorTile" id="black1"></div>
+        <div onclick="band1('brown')" class="brown colorTile" id="brown1"></div>
+        <div onclick="band1('red')" class="red colorTile" id="red1"></div>
+        <div
+          onclick="band1('orange')"
+          class="orange colorTile"
+          id="orange1"
+        ></div>
+        <div
+          onclick="band1('yellow')"
+          class="yellow colorTile"
+          id="yellow1"
+        ></div>
+        <div onclick="band1('green')" class="green colorTile" id="green1"></div>
+        <div onclick="band1('blue')" class="blue colorTile" id="blue1"></div>
+        <div
+          onclick="band1('violet')"
+          class="violet colorTile"
+          id="violet1"
+        ></div>
+        <div onclick="band1('gray')" class="gray colorTile" id="gray1"></div>
+        <div onclick="band1('white')" class="white colorTile" id="white1"></div>
+      </div>
+      <div id="band2">
+        <div id="dummy"></div>
+        <div id="dummy"></div>
+        <div onclick="band2('black')" class="black colorTile" id="black2"></div>
+        <div onclick="band2('brown')" class="brown colorTile" id="brown2"></div>
+        <div onclick="band2('red')" class="red colorTile" id="red2"></div>
+        <div
+          onclick="band2('orange')"
+          class="orange colorTile"
+          id="orange2"
+        ></div>
+        <div
+          onclick="band2('yellow')"
+          class="yellow colorTile"
+          id="yellow2"
+        ></div>
+        <div onclick="band2('green')" class="green colorTile" id="green2"></div>
+        <div onclick="band2('blue')" class="blue colorTile" id="blue2"></div>
+        <div
+          onclick="band2('violet')"
+          class="violet colorTile"
+          id="violet2"
+        ></div>
+        <div onclick="band2('gray')" class="gray colorTile" id="gray2"></div>
+        <div onclick="band2('white')" class="white colorTile" id="white2"></div>
+      </div>
+      <div id="band3">
+        <div
+          onclick="band3('silver')"
+          class="silver colorTile"
+          id="silver3"
+        ></div>
+        <div onclick="band3('gold')" class="gold colorTile" id="gold3"></div>
+        <div onclick="band3('black')" class="black colorTile" id="black3"></div>
+        <div onclick="band3('brown')" class="brown colorTile" id="brown3"></div>
+        <div onclick="band3('red')" class="red colorTile" id="red3"></div>
+        <div
+          onclick="band3('orange')"
+          class="orange colorTile"
+          id="orange3"
+        ></div>
+        <div
+          onclick="band3('yellow')"
+          class="yellow colorTile"
+          id="yellow3"
+        ></div>
+        <div onclick="band3('green')" class="green colorTile" id="green3"></div>
+        <div onclick="band3('blue')" class="blue colorTile" id="blue3"></div>
+        <div
+          onclick="band3('violet')"
+          class="violet colorTile"
+          id="violet3"
+        ></div>
+        <div onclick="band3('gray')" class="gray colorTile" id="gray3"></div>
+        <div onclick="band3('white')" class="white colorTile" id="white3"></div>
+      </div>
+      <div id="band4">
+        <div
+          onclick="band4('silver')"
+          class="silver colorTile"
+          id="silver4"
+        ></div>
+        <div onclick="band4('gold')" class="gold colorTile" id="gold4"></div>
+        <div onclick="band4('black')" class="black colorTile" id="black4"></div>
+        <div onclick="band4('brown')" class="brown colorTile" id="brown4"></div>
+        <div onclick="band4('red')" class="red colorTile" id="red4"></div>
+        <div
+          onclick="band4('orange')"
+          class="orange colorTile"
+          id="orange4"
+        ></div>
+        <div
+          onclick="band4('yellow')"
+          class="yellow colorTile"
+          id="yellow4"
+        ></div>
+        <div onclick="band4('green')" class="green colorTile" id="green4"></div>
+        <div onclick="band4('blue')" class="blue colorTile" id="blue4"></div>
+        <div
+          onclick="band4('violet')"
+          class="violet colorTile"
+          id="violet4"
+        ></div>
+        <div onclick="band4('gray')" class="gray colorTile" id="gray4"></div>
+        <div onclick="band4('white')" class="white colorTile" id="white4"></div>
+      </div>
+    </div>
+  </body>
+</html>
