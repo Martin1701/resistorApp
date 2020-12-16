@@ -18,7 +18,7 @@ var bandColors = [
   "gray",
   "white",
 ];
-// object storing bandd colors and their corresponding tolerances
+// object storing ban>> colors and their corresponding tolerances
 var tolerances = {
   silver: "10%",
   gold: "5%",
@@ -34,19 +34,19 @@ var tolerances = {
   white: "10%",
 };
 var selectedTile = {
-  border: "2px solid black",
   height: "90%",
   width: "90%",
+  "box-shadow": "0px 0px 5px 15px yellow",
 };
 var normalTile = {
   border: "0px solid black",
   height: "100%",
   width: "100%",
+  "box-shadow": "none",
 };
 
 function assignStyle(activeTile, bandNumber) {
-  console.log(bandNumber);
-  //set i to 0 to skip silver and gold tiles which are not in first 3 bands
+  //set i to 2 to skip silver and gold tiles which are not in first 3 bands
   if (bandNumber < 3) {
     var i = 2;
   }
@@ -96,7 +96,38 @@ function band3(band3Color) {
 // calculation of the tolerance of the resistance based on band4 color
 function band4(band4Color) {
   tolerance = tolerances[band4Color];
-  console.log(tolerance);
+  displayedTolerace.innerHTML = "±" + tolerance;
+  disableToleranceTiles();
+  switch (tolerances[band4Color]) {
+    case "20%": {
+      assignStyleToTile("20%");
+      break;
+    }
+    case "10%": {
+      assignStyleToTile("10%");
+      break;
+    }
+    case "5%": {
+      assignStyleToTile("5%");
+      break;
+    }
+    case "3%": {
+      assignStyleToTile("2.5%");
+      break;
+    }
+    case "2%": {
+      assignStyleToTile("2.5%");
+      break;
+    }
+    case "1%": {
+      assignStyleToTile("1%");
+      break;
+    }
+    case "0.5%": {
+      assignStyleToTile("0.5%");
+      break;
+    }
+  }
   assignStyle(band4Color, "4");
   calculate2();
 }

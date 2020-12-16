@@ -1,6 +1,6 @@
 function calculate() {
   resistance = document.getElementById("inputField").value;
-  var currentEIAvalues = E24;
+  var currentEIAvalues = E12;
 
   var lowIndex = 0;
   var highIndex = currentEIAvalues.length - 1;
